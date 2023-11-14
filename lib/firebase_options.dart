@@ -50,6 +50,7 @@ class DefaultFirebaseOptions {
     projectId: 'tiktok-clone-66131',
     authDomain: 'tiktok-clone-66131.firebaseapp.com',
     storageBucket: 'tiktok-clone-66131.appspot.com',
+    measurementId: 'G-954PRG58J6',
   );
 
   static const FirebaseOptions android = FirebaseOptions(

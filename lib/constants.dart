@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/controller/auth_controller.dart';
+import 'package:tiktok_clone/views/screens/add_video.dart';
+import 'package:tiktok_clone/views/screens/video_screen.dart';
 
 const Color bgColor = Colors.black;
 var buttonColor = Colors.red[400];
@@ -17,9 +19,9 @@ var authController = AuthController.instance;
 
 //Pages
 var pages = [
-  const Center(child: Text('HomePage')),
+  VideoScreen(),
   const Center(child: Text('SearchPage')),
-  const Center(child: Text('AddPage')),
+  const AddVideoScreen(),
   const Center(child: Text('MessagePage')),
   const Center(child: Text('ProfilePage')),
 ];
