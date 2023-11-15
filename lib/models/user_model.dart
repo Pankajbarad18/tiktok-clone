@@ -15,12 +15,13 @@ class User {
   Map<String, dynamic> toJson() =>
       {"name": name, "email": email, "profilePhoto": profilePhoto, "uid": uid};
 
-  static User fromsnap(DocumentSnapshot snapshot) {
-    var snap = snapshot as Map<String, dynamic>;
+  static User fromSnap(DocumentSnapshot snap) {
+    var snapshot = snap.data() as Map<String, dynamic>;
     return User(
-        name: snap['name'],
-        email: snap['email'],
-        profilePhoto: snap['profilePhoto'],
-        uid: snap['uid']);
+      email: snapshot['email'],
+      profilePhoto: snapshot['profilePhoto'],
+      uid: snapshot['uid'],
+      name: snapshot['name'],
+    );
   }
 }
